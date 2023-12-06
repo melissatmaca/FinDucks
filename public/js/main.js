@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (expenses > income) {
       return "Your expenses exceed your income. Consider ways to reduce your spending or increase your income.";
     } else if (expenses === income) {
-      return "You are breaking even. Try to save a bit more for unexpected expenses.";
+      return "You are breaking even. If you are saving and investing well, good job. If not, consider ways to reduce your spending or increase your income to save and invest more.";
     } else {
       const surplus = income - expenses;
       return `You are within your budget with a surplus of $${surplus}. Consider increasing your savings and investments.`;
@@ -96,5 +96,35 @@ document.addEventListener("DOMContentLoaded", function () {
   var infoIcons = document.querySelectorAll(".info-icon");
   infoIcons.forEach(function (icon) {
     icon.addEventListener("click", toggleInfoContent);
+  });
+});
+
+document.getElementById("quiz-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const correctAnswers = {
+    q1: "a",
+    q2: "b",
+    q3: "c",
+    q4: "c",
+    q5: "b",
+    q6: "c",
+    q7: "b",
+    q8: "c",
+    q9: "b",
+    q10: "b"
+  };
+
+  Object.keys(correctAnswers).forEach((question) => {
+    const selectedValue = document.querySelector(`input[name="${question}"]:checked`)?.value;
+    const feedbackElement = document.getElementById(`feedback-${question}`);
+
+    if (selectedValue === correctAnswers[question]) {
+      feedbackElement.textContent = "Correct!";
+      feedbackElement.style.color = "green";
+    } else {
+      feedbackElement.textContent = "Incorrect. The correct answer is " + correctAnswers[question];
+      feedbackElement.style.color = "red";
+    }
   });
 });
