@@ -115,6 +115,19 @@ document.getElementById("quiz-form").addEventListener("submit", function (event)
     q10: "b"
   };
 
+  const explanations = {
+    q1: "A budget is a financial plan that estimates income and expenses over a certain period!",
+    q2: "Covering 3-6 months of expenses is a great starting point, as well as a lifesaver for emergencies!",
+    q3: "Your credit report details your credit history, including your borrowing and repayment habits.",
+    q4: "There are several other benefits to consolidating your loans, as it can lower your monthly payment!",
+    q5: "Diversifying your investments can reduce risk. This means spreading your investments across different types of assets!",
+    q6: "When it comes to eating out, there are many added costs that are difficult to detect without cooking at home.",
+    q7: "The W-2 form is crucial for tax season, as it summarizes earnings and taxes withheld by your employer.",
+    q8: "Under the circumstance that requires insurance, the deductible is your out of pocket cost before the insurer plays their part.",
+    q9: "Remember one of our essential goals for budgeting: saving!",
+    q10: "Compound interest is quite an effective practice for saving; it's like saving habitually!"
+  };
+
   Object.keys(correctAnswers).forEach((question) => {
     const selectedValue = document.querySelector(`input[name="${question}"]:checked`)?.value;
     const feedbackElement = document.getElementById(`feedback-${question}`);
@@ -123,7 +136,7 @@ document.getElementById("quiz-form").addEventListener("submit", function (event)
       feedbackElement.textContent = "Correct!";
       feedbackElement.style.color = "green";
     } else {
-      feedbackElement.textContent = "Incorrect. The correct answer is " + correctAnswers[question];
+      feedbackElement.textContent = "Incorrect. The correct answer is " + correctAnswers[question] + ". " + explanations[question];
       feedbackElement.style.color = "red";
     }
   });
