@@ -124,7 +124,7 @@ document.getElementById("quiz-form").addEventListener("submit", function (event)
       feedbackElement.style.color = "green";
     } else {
       feedbackElement.textContent = "Incorrect. The correct answer is " + correctAnswers[question];
-      feedbackElement.style.color = "red";
+      feedbackElement.style.color = "maroon";
     }
   });
 });
