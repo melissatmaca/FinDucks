@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main</title>
+    <link rel="stylesheet" href="quizstyle.css"/>
+</head>
+<body class="body">
+
+<header>
+        <navbar>
+            <div class="topbar-centered">
+                <a class="active" href="main.html">Home</a>
+                <a href="flash.html">Flash Cards</a>
+                <a href="quiz.html">Quizzes</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </navbar>
+</header>
+
+<div id="container">
+    <div id="start">Start Quiz!</div>
+    <div id="quiz" style="display: none">
+        <div id="question"></div>
+        <div id="choices">
+            <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+            <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+            <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+        </div>
+        <div id="progress"></div>
+    </div>
+    <div id="endContainer" style="display: none"></div>
+</div>
+<script src="quizquest.js"></script>
+
+
+</body>
+</html>
+
