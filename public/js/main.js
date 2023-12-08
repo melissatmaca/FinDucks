@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         datasets: [
           {
             data: expensePercentages,
-            backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#E7E9ED", "#4BC0C0", "#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+            backgroundColor: ["#FF6384", "#36A2EB", "#FFA500", "#E7E9ED", "#55FF55", "#F7464A", "#A1E800", "#F2F233", "#949FB1", "#4D5360", "#FF6CFF", "#00FFFF"],
           },
         ],
       },
